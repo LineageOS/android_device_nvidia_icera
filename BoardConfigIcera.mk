@@ -14,12 +14,4 @@
 # limitations under the License.
 #
 
-TARGET_TEGRA_MODEM := icera
-
-PRODUCT_PACKAGES += \
-    init.icera.rc \
-    init.icera.common.rc
-
-# Ril Shim
-PRODUCT_PACKAGES += \
-    libcutils_shim
+TARGET_LD_SHIM_LIBS += /$(TARGET_COPY_OUT_VENDOR)/lib/libril-icera.so|/$(TARGET_COPY_OUT_VENDOR)/lib/libcutils_shim.so
