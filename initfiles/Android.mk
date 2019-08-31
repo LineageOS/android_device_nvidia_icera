@@ -14,8 +14,20 @@
 # limitations under the License.
 #
 
-TARGET_TEGRA_MODEM := icera
+LOCAL_PATH:= $(call my-dir)
 
-PRODUCT_PACKAGES += \
-    init.icera.rc \
-    init.icera.common.rc
+include $(CLEAR_VARS)
+LOCAL_MODULE               := init.icera.common.rc
+LOCAL_MODULE_CLASS         := ETC
+LOCAL_SRC_FILES            := init.icera.common.rc
+LOCAL_VENDOR_MODULE        := true
+LOCAL_MODULE_RELATIVE_PATH := init/hw
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE               := init.icera.rc
+LOCAL_MODULE_CLASS         := ETC
+LOCAL_SRC_FILES            := init.icera.tablet.rc
+LOCAL_VENDOR_MODULE        := true
+LOCAL_MODULE_RELATIVE_PATH := init/hw
+include $(BUILD_PREBUILT)
