@@ -16,6 +16,10 @@ on init
     setprop gsm.modem.crashlogs.directory /data/rfs/data/debug
     setprop ril.maxretries 15
 
+# Data only tablet options
+    setprop ril.icera-config-args "notifier:ON,datastall:ON,lwaactivate"
+    setprop ro.modem.do 1
+
 # Start Icera switcher daemon
 service icera-switcher /vendor/bin/icera-switcherd
     class main
