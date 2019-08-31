@@ -14,12 +14,13 @@
 # limitations under the License.
 #
 
-TARGET_TEGRA_MODEM := icera
+LOCAL_PATH:= $(call my-dir)
 
-PRODUCT_PACKAGES += \
-    init.icera.rc \
-    init.icera.common.rc
-
-# Ril Shim
-PRODUCT_PACKAGES += \
-    libcutils_shim
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES        := socket_loopback_client.c
+LOCAL_SHARED_LIBRARIES := libcutils
+LOCAL_MULTILIB         := 32
+LOCAL_MODULE           := libcutils_shim
+LOCAL_MODULE_TAGS      := optional
+LOCAL_VENDOR_MODULE    := true
+include $(BUILD_SHARED_LIBRARY)
