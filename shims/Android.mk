@@ -19,7 +19,7 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES        := socket_loopback_client.c
 LOCAL_SHARED_LIBRARIES := libcutils
-LOCAL_MULTILIB         := 32
+LOCAL_MULTILIB         := first
 LOCAL_MODULE           := libcutils_shim
 LOCAL_MODULE_TAGS      := optional
 LOCAL_VENDOR_MODULE    := true

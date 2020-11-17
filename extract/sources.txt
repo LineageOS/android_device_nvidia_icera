@@ -1,0 +1,1 @@
+nv-tegra-t210-rel24-r7	https://nv-tegra.nvidia.com/gitweb/?p=tegra/prebuilts-licensed-binary-tlk-t210.git;a=blob_plain;f=extract-nv-bins.sh;hb=f76543473508fb9d646808be141b43aa4d4ea402	git	prebuilt/t210/target/product/t210

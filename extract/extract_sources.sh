@@ -14,4 +14,5 @@
 # limitations under the License.
 #
 
-#FILELIST_PATHS+=("icera");
+SOURCE_PATHS+=("icera");
+FILELIST_PATHS+=("icera");

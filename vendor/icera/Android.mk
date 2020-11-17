@@ -17,9 +17,10 @@ COMMON_ICERA_PATH := ../../../../../vendor/nvidia/common/icera
 
 include $(CLEAR_VARS)
 LOCAL_MODULE               := icera-switcherd
-LOCAL_SRC_FILES            := $(COMMON_ICERA_PATH)/bin32/icera-switcherd
+LOCAL_SRC_FILES_32         := $(COMMON_ICERA_PATH)/bin32/icera-switcherd
+LOCAL_SRC_FILES_64         := $(COMMON_ICERA_PATH)/bin64/icera-switcherd
+LOCAL_MULTILIB             := first
 LOCAL_MODULE_CLASS         := EXECUTABLES
-LOCAL_MODULE_TARGET_ARCH   := arm
 LOCAL_MODULE_TAGS          := optional
 LOCAL_MODULE_OWNER         := nvidia
 LOCAL_VENDOR_MODULE        := true
@@ -27,10 +28,11 @@ include $(BUILD_NVIDIA_COMMON_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE               := libril-icera
-LOCAL_SRC_FILES            := $(COMMON_ICERA_PATH)/lib/libril-icera.so
+LOCAL_SRC_FILES_32         := $(COMMON_ICERA_PATH)/lib/libril-icera.so
+LOCAL_SRC_FILES_64         := $(COMMON_ICERA_PATH)/lib64/libril-icera.so
 LOCAL_MODULE_SUFFIX        := .so
+LOCAL_MULTILIB             := first
 LOCAL_MODULE_CLASS         := SHARED_LIBRARIES
-LOCAL_MODULE_TARGET_ARCH   := arm
 LOCAL_MODULE_TAGS          := optional
 LOCAL_MODULE_OWNER         := nvidia
 LOCAL_VENDOR_MODULE        := true
@@ -40,7 +42,6 @@ include $(CLEAR_VARS)
 LOCAL_MODULE               := modemnic
 LOCAL_SRC_FILES            := $(COMMON_ICERA_PATH)/bin/modemnic
 LOCAL_MODULE_CLASS         := EXECUTABLES
-LOCAL_MODULE_TARGET_ARCH   := arm
 LOCAL_MODULE_TAGS          := optional
 LOCAL_MODULE_OWNER         := nvidia
 LOCAL_VENDOR_MODULE        := true

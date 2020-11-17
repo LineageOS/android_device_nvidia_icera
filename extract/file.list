@@ -1,4 +1,6 @@
 # Icera
-nv-tegra-t124	vendor/bin/icera-switcherd	common/icera/bin32/icera-switcherd
-stock-t124	system/vendor/bin/modemnic	common/icera/bin/modemnic
-nv-tegra-t124	vendor/lib/libril-icera.so	common/icera/lib/libril-icera.so
+stock-t124		system/vendor/bin/modemnic	common/icera/bin/modemnic
+nv-tegra-t210-rel24-r7	vendor/bin/icera-switcherd	common/icera/bin64/icera-switcherd
+nv-tegra-t210-rel24-r7	vendor/lib64/libril-icera.so	common/icera/lib64/libril-icera.so
+nv-tegra-t124		vendor/bin/icera-switcherd	common/icera/bin32/icera-switcherd
+nv-tegra-t124		vendor/lib/libril-icera.so	common/icera/lib/libril-icera.so

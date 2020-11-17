@@ -15,7 +15,9 @@
 #
 
 ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
-TARGET_LD_SHIM_LIBS += /vendor/lib/libril-icera.so|/vendor/lib/libcutils_shim.so
+TARGET_LD_SHIM_LIBS += \
+    /vendor/lib/libril-icera.so|/vendor/lib/libcutils_shim.so \
+    /vendor/lib64/libril-icera.so|/vendor/lib64/libcutils_shim.so
 else
 TARGET_LD_SHIM_LIBS += /system/vendor/lib/libril-icera.so|/system/vendor/lib/libcutils_shim.so
 endif
