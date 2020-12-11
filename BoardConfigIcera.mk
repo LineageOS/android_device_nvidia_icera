@@ -14,4 +14,8 @@
 # limitations under the License.
 #
 
-TARGET_LD_SHIM_LIBS += /$(TARGET_COPY_OUT_VENDOR)/lib/libril-icera.so|/$(TARGET_COPY_OUT_VENDOR)/lib/libcutils_shim.so
+ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
+TARGET_LD_SHIM_LIBS += /vendor/lib/libril-icera.so|/vendor/lib/libcutils_shim.so
+else
+TARGET_LD_SHIM_LIBS += /system/vendor/lib/libril-icera.so|/system/vendor/lib/libcutils_shim.so
+endif
