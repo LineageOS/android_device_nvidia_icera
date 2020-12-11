@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,16 +14,12 @@
 # limitations under the License.
 #
 
-TARGET_TEGRA_MODEM := icera
+LOCAL_PATH:= $(call my-dir)
 
-PRODUCT_PACKAGES += \
-    init.icera.rc \
-    init.icera.common.rc
-
-# Ril Shim
-PRODUCT_PACKAGES += \
-    libcutils_shim
-
-# Overlay Package
-PRODUCT_PACKAGES += \
-    FrameworksOverlayIcera
+include $(CLEAR_VARS)
+LOCAL_PACKAGE_NAME   := FrameworksOverlayIcera
+LOCAL_RESOURCE_DIR   := $(LOCAL_PATH)/res
+LOCAL_CERTIFICATE    := platform
+LOCAL_SDK_VERSION    := current
+LOCAL_PRODUCT_MODULE := true
+include $(BUILD_RRO_PACKAGE)
