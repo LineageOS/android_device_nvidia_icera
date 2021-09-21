@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,20 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-TARGET_TEGRA_MODEM := icera
+LOCAL_PATH := $(call my-dir)
 
-$(call inherit-product, device/nvidia/icera/vendor/icera/icera.mk)
-
-PRODUCT_PACKAGES += \
-    init.icera.rc \
-    init.icera.common.rc
-
-# Ril Shim
-PRODUCT_PACKAGES += \
-    libcutils_shim
-
-# Overlay Package
-PRODUCT_PACKAGES += \
-    FrameworksOverlayIcera
+include $(call all-makefiles-under,$(LOCAL_PATH))
